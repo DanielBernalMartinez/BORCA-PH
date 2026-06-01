@@ -182,11 +182,11 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- CATEGORÍAS FILTRO -->
-<section class="bg-white" style="padding:32px 0 0">
+<!-- FILTROS -->
+<section class="bg-white" style="padding:36px 0 0">
   <div class="section-wrap">
-    <div style="display:flex;gap:10px;flex-wrap:wrap;padding-bottom:0">
-      <button class="filter-btn active" data-cat="all">Todos</button>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="filter-btn active" data-cat="all">Todos los artículos</button>
       <button class="filter-btn" data-cat="juridico">Jurídico</button>
       <button class="filter-btn" data-cat="financiero">Financiero</button>
       <button class="filter-btn" data-cat="convivencia">Convivencia</button>
@@ -199,161 +199,331 @@ a{text-decoration:none;color:inherit}
 
 <!-- ARTÍCULO DESTACADO -->
 <section class="bg-white">
-  <div class="section-wrap" style="padding-top:40px;padding-bottom:0">
-    <div style="background:var(--gray-bg);border-radius:22px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:var(--shadow-card);margin-bottom:48px" class="anim">
-      <div style="background:linear-gradient(135deg,var(--teal) 0%,var(--teal-dark) 100%);display:flex;align-items:center;justify-content:center;min-height:280px;padding:40px;position:relative;overflow:hidden">
-        <div style="position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:rgba(200,169,107,0.15)"></div>
-        <i class="fa-solid fa-gavel" style="font-size:80px;color:rgba(255,255,255,0.2);position:absolute;bottom:-10px;right:20px"></i>
-        <div style="position:relative;z-index:1;text-align:center">
-          <span style="background:var(--gold);color:white;font-size:10.5px;font-weight:700;padding:4px 12px;border-radius:50px;letter-spacing:.8px;text-transform:uppercase">Destacado</span>
-          <p style="color:rgba(255,255,255,0.7);font-size:12px;margin-top:16px">Artículo más leído del mes</p>
+  <div class="section-wrap" style="padding-top:40px">
+    <div class="featured-article anim">
+      <div class="featured-img">
+        <div class="featured-img-overlay"></div>
+        <i class="fa-solid fa-gavel featured-icon"></i>
+        <div class="featured-badge-wrap">
+          <span class="featured-badge">⭐ Artículo más leído</span>
         </div>
       </div>
-      <div style="padding:36px">
+      <div class="featured-body">
         <span class="blog-tag">Jurídico</span>
-        <h2 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;line-height:1.3;margin-bottom:12px">Todo lo que debes saber sobre la Ley 675 de Propiedad Horizontal en Colombia</h2>
-        <p style="font-size:13px;color:var(--text-body);line-height:1.75;margin-bottom:20px">La Ley 675 de 2001 es el marco legal que regula la vida en copropiedades. Conocer sus puntos clave es esencial para administradores y propietarios que quieren convivir en armonía y evitar conflictos.</p>
+        <h2 class="featured-title">Todo lo que debes saber sobre la Ley 675 de Propiedad Horizontal en Colombia</h2>
+        <p class="featured-desc">La Ley 675 de 2001 es el marco legal que rige la convivencia y administración en todas las copropiedades del país. Conocer sus puntos clave es esencial para administradores, consejos de administración y propietarios que quieren evitar conflictos y actuar dentro de la legalidad.</p>
         <div class="blog-meta" style="margin-bottom:20px">
           <span><i class="fa-regular fa-calendar"></i> 15 de noviembre, 2024</span>
           <span><i class="fa-regular fa-clock"></i> 8 min lectura</span>
           <span><i class="fa-regular fa-eye"></i> 2.4k vistas</span>
+          <span><i class="fa-regular fa-user"></i> Equipo BORCA</span>
         </div>
-        <a href="#" style="display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:var(--teal);color:white;border-radius:50px;font-size:13px;font-weight:700">Leer artículo <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="blog-ley-675.html" class="btn-read">Leer artículo completo <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ARTÍCULOS GRID -->
+<!-- GRID DE ARTÍCULOS -->
 <section class="bg-white">
-  <div class="section-wrap" style="padding-top:0;padding-bottom:72px">
-    <div class="cards-grid-3" id="blog-grid">
+  <div class="section-wrap" style="padding-top:40px;padding-bottom:72px">
 
-      <div class="blog-card" data-cat="financiero">
-        <div class="blog-card-img" style="background:linear-gradient(135deg,#3a6ea8,#1a4e88)">
+    <div class="blog-grid" id="blog-grid">
+
+      <!-- 1 -->
+      <article class="blog-card" data-cat="financiero">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#1a5fa8,#0d3d7a)">
           <i class="fa-solid fa-chart-pie"></i>
         </div>
         <div class="blog-card-body">
-          <span class="blog-tag" style="background:var(--card-blue);color:#3a6ea8">Financiero</span>
+          <span class="blog-tag" style="background:var(--card-blue);color:#1a5fa8">Financiero</span>
           <h3>Cómo elaborar el presupuesto anual de tu copropiedad paso a paso</h3>
-          <p>Guía práctica para consejos de administración que quieren planificar sus ingresos y gastos de manera eficiente y transparente.</p>
+          <p>Una guía práctica para consejos de administración que quieren planificar sus ingresos y gastos con eficiencia y total transparencia ante los copropietarios.</p>
           <div class="blog-meta">
             <span><i class="fa-regular fa-calendar"></i> 5 nov 2024</span>
             <span><i class="fa-regular fa-clock"></i> 6 min</span>
           </div>
+          <a class="blog-link" href="#">Leer más <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </div>
+      </article>
 
-      <div class="blog-card" data-cat="convivencia">
+      <!-- 2 -->
+      <article class="blog-card" data-cat="convivencia">
         <div class="blog-card-img" style="background:linear-gradient(135deg,#2e8b57,#1a5c3a)">
           <i class="fa-solid fa-people-group"></i>
         </div>
         <div class="blog-card-body">
           <span class="blog-tag" style="background:var(--card-green);color:var(--teal)">Convivencia</span>
           <h3>Manual de convivencia: cómo redactarlo correctamente y hacerlo cumplir</h3>
-          <p>El manual de convivencia es uno de los documentos más importantes de cualquier copropiedad. Aprende cómo construirlo de forma participativa.</p>
+          <p>El manual de convivencia es uno de los documentos más importantes de cualquier copropiedad. Aprende a construirlo de forma participativa y con respaldo legal.</p>
           <div class="blog-meta">
             <span><i class="fa-regular fa-calendar"></i> 28 oct 2024</span>
             <span><i class="fa-regular fa-clock"></i> 7 min</span>
           </div>
+          <a class="blog-link" href="#">Leer más <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </div>
+      </article>
 
-      <div class="blog-card" data-cat="mantenimiento">
+      <!-- 3 -->
+      <article class="blog-card" data-cat="mantenimiento">
         <div class="blog-card-img" style="background:linear-gradient(135deg,#c8a96b,#8a6530)">
-          <i class="fa-solid fa-wrench"></i>
+          <i class="fa-solid fa-screwdriver-wrench"></i>
         </div>
         <div class="blog-card-body">
-          <span class="blog-tag" style="background:var(--card-beige);color:#a07840">Mantenimiento</span>
+          <span class="blog-tag" style="background:var(--card-beige);color:#8a6530">Mantenimiento</span>
           <h3>Plan de mantenimiento preventivo: la clave para proteger tu inversión</h3>
-          <p>Un programa de mantenimiento bien estructurado puede reducir en un 40% los costos de reparación en áreas comunes de conjuntos residenciales.</p>
+          <p>Un programa de mantenimiento bien estructurado puede reducir hasta un 40% los costos de reparación en áreas comunes. Te explicamos cómo armarlo.</p>
           <div class="blog-meta">
             <span><i class="fa-regular fa-calendar"></i> 18 oct 2024</span>
             <span><i class="fa-regular fa-clock"></i> 5 min</span>
           </div>
+          <a class="blog-link" href="#">Leer más <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </div>
+      </article>
 
-      <div class="blog-card" data-cat="normativa">
+      <!-- 4 -->
+      <article class="blog-card" data-cat="normativa">
         <div class="blog-card-img" style="background:linear-gradient(135deg,#7a4eb0,#5a2e90)">
           <i class="fa-solid fa-file-contract"></i>
         </div>
         <div class="blog-card-body">
           <span class="blog-tag" style="background:var(--card-lila);color:#7a4eb0">Normativa</span>
-          <h3>Obligaciones tributarias de las copropiedades: lo que debes declarar</h3>
-          <p>Las copropiedades tienen obligaciones fiscales que muchos desconocen. Evita sanciones conociendo qué declaraciones debes presentar ante la DIAN.</p>
+          <h3>Obligaciones tributarias de las copropiedades: lo que debes declarar ante la DIAN</h3>
+          <p>Muchas copropiedades desconocen sus obligaciones fiscales. Te explicamos qué impuestos aplican, qué declaraciones presentar y cómo evitar sanciones.</p>
           <div class="blog-meta">
             <span><i class="fa-regular fa-calendar"></i> 10 oct 2024</span>
             <span><i class="fa-regular fa-clock"></i> 9 min</span>
           </div>
+          <a class="blog-link" href="#">Leer más <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </div>
+      </article>
 
-      <div class="blog-card" data-cat="juridico">
+      <!-- 5 -->
+      <article class="blog-card" data-cat="juridico">
         <div class="blog-card-img" style="background:linear-gradient(135deg,var(--teal),var(--teal-dark))">
           <i class="fa-solid fa-scale-balanced"></i>
         </div>
         <div class="blog-card-body">
           <span class="blog-tag">Jurídico</span>
           <h3>¿Qué hacer cuando un propietario no paga la cuota de administración?</h3>
-          <p>Conoce el proceso legal paso a paso para cobrar la cartera de morosos en una copropiedad, desde el cobro persuasivo hasta el proceso ejecutivo.</p>
+          <p>Conoce el proceso legal paso a paso para cobrar la cartera de morosos: desde el cobro persuasivo y extrajudicial hasta el proceso ejecutivo ante un juzgado.</p>
           <div class="blog-meta">
             <span><i class="fa-regular fa-calendar"></i> 2 oct 2024</span>
             <span><i class="fa-regular fa-clock"></i> 6 min</span>
           </div>
+          <a class="blog-link" href="#">Leer más <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </div>
+      </article>
 
-      <div class="blog-card" data-cat="convivencia">
+      <!-- 6 -->
+      <article class="blog-card" data-cat="convivencia">
         <div class="blog-card-img" style="background:linear-gradient(135deg,#e07a40,#a04a18)">
           <i class="fa-solid fa-comments"></i>
         </div>
         <div class="blog-card-body">
           <span class="blog-tag" style="background:var(--card-green);color:var(--teal)">Convivencia</span>
           <h3>Cómo manejar conflictos entre vecinos: estrategias de mediación efectiva</h3>
-          <p>Los conflictos entre vecinos son inevitables, pero manejables. Descubre técnicas de mediación que funcionan en el contexto de la propiedad horizontal.</p>
+          <p>Los conflictos entre vecinos son inevitables pero manejables. Descubre técnicas probadas de mediación adaptadas al contexto de la propiedad horizontal.</p>
           <div class="blog-meta">
             <span><i class="fa-regular fa-calendar"></i> 24 sep 2024</span>
             <span><i class="fa-regular fa-clock"></i> 5 min</span>
           </div>
+          <a class="blog-link" href="#">Leer más <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </div>
+      </article>
 
-    </div>
+      <!-- 7 -->
+      <article class="blog-card" data-cat="financiero">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#2e7d7d,#184848)">
+          <i class="fa-solid fa-piggy-bank"></i>
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-tag" style="background:var(--card-blue);color:#1a5fa8">Financiero</span>
+          <h3>Fondo de imprevistos: qué es, para qué sirve y cómo administrarlo correctamente</h3>
+          <p>La Ley 675 obliga a todas las copropiedades a constituir un fondo de imprevistos. Te explicamos cómo calcularlo, en qué invertirlo y cuándo usarlo.</p>
+          <div class="blog-meta">
+            <span><i class="fa-regular fa-calendar"></i> 15 sep 2024</span>
+            <span><i class="fa-regular fa-clock"></i> 5 min</span>
+          </div>
+          <a class="blog-link" href="#">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="blog-card" data-cat="normativa">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#b03a5a,#7a1a38)">
+          <i class="fa-solid fa-building-shield"></i>
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-tag" style="background:var(--card-lila);color:#7a4eb0">Normativa</span>
+          <h3>Seguros obligatorios en copropiedades: qué debes tener asegurado y por qué</h3>
+          <p>¿Sabías que la Ley exige pólizas específicas para toda copropiedad? Conoce cuáles son obligatorias, cuáles recomendables y cómo contratarlas correctamente.</p>
+          <div class="blog-meta">
+            <span><i class="fa-regular fa-calendar"></i> 5 sep 2024</span>
+            <span><i class="fa-regular fa-clock"></i> 6 min</span>
+          </div>
+          <a class="blog-link" href="#">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- 9 -->
+      <article class="blog-card" data-cat="mantenimiento">
+        <div class="blog-card-img" style="background:linear-gradient(135deg,#3a7a3a,#1a4a1a)">
+          <i class="fa-solid fa-leaf"></i>
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-tag" style="background:var(--card-beige);color:#8a6530">Mantenimiento</span>
+          <h3>Zonas verdes en copropiedades: mantenimiento, costos y recomendaciones</h3>
+          <p>Las zonas verdes bien mantenidas aumentan hasta un 15% el valor de los inmuebles. Aprende a gestionar su mantenimiento de manera eficiente y económica.</p>
+          <div class="blog-meta">
+            <span><i class="fa-regular fa-calendar"></i> 28 ago 2024</span>
+            <span><i class="fa-regular fa-clock"></i> 4 min</span>
+          </div>
+          <a class="blog-link" href="#">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+    </div><!-- /#blog-grid -->
 
     <!-- Paginación -->
-    <div style="display:flex;justify-content:center;gap:8px;margin-top:48px">
-      <button style="width:38px;height:38px;border-radius:50%;background:var(--teal);color:white;border:none;font-weight:700;cursor:pointer;font-size:13px">1</button>
-      <button style="width:38px;height:38px;border-radius:50%;background:var(--gray-bg);color:var(--text-dark);border:1.5px solid #dde6e6;font-weight:700;cursor:pointer;font-size:13px">2</button>
-      <button style="width:38px;height:38px;border-radius:50%;background:var(--gray-bg);color:var(--text-dark);border:1.5px solid #dde6e6;font-weight:700;cursor:pointer;font-size:13px">3</button>
-      <button style="width:38px;height:38px;border-radius:50%;background:var(--gray-bg);color:var(--text-dark);border:1.5px solid #dde6e6;font-weight:700;cursor:pointer;font-size:13px">→</button>
+    <div class="pagination">
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn next"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+  </div>
+</section>
+
+<!-- GUÍAS DESCARGABLES -->
+<section class="bg-gray">
+  <div class="section-wrap section-pad">
+    <div style="text-align:center;margin-bottom:44px">
+      <p class="section-label" style="justify-content:center">Recursos gratuitos</p>
+      <h2 class="section-title">Guías y plantillas <span>descargables</span></h2>
+      <p style="color:var(--text-body);font-size:14px;max-width:520px;margin:0 auto;line-height:1.8">Material práctico que puedes usar directamente en tu copropiedad, sin costo y sin registro.</p>
+    </div>
+    <div class="cards-grid-3">
+      <div class="card card-border" style="text-align:center;background:var(--white)">
+        <div style="width:64px;height:64px;border-radius:16px;background:var(--card-green);display:flex;align-items:center;justify-content:center;font-size:26px;color:var(--teal);margin:0 auto 16px">
+          <i class="fa-solid fa-file-excel"></i>
+        </div>
+        <h3 style="font-size:15px;margin-bottom:8px">Plantilla de presupuesto anual</h3>
+        <p style="font-size:12.5px;color:var(--text-body);margin-bottom:18px">Hoja de cálculo editable con todas las categorías de ingresos y gastos típicos de una copropiedad.</p>
+        <a href="https://wa.me/573053498787?text=Hola%2C+quiero+la+plantilla+de+presupuesto+anual" target="_blank" class="dl-btn">
+          <i class="fa-brands fa-whatsapp"></i> Solicitar por WhatsApp
+        </a>
+      </div>
+      <div class="card card-border" style="text-align:center;background:var(--white)">
+        <div style="width:64px;height:64px;border-radius:16px;background:var(--card-beige);display:flex;align-items:center;justify-content:center;font-size:26px;color:#a07840;margin:0 auto 16px">
+          <i class="fa-solid fa-file-word"></i>
+        </div>
+        <h3 style="font-size:15px;margin-bottom:8px">Modelo de manual de convivencia</h3>
+        <p style="font-size:12.5px;color:var(--text-body);margin-bottom:18px">Documento Word editable con todos los capítulos requeridos por la Ley 675 para conjuntos residenciales.</p>
+        <a href="https://wa.me/573053498787?text=Hola%2C+quiero+el+modelo+de+manual+de+convivencia" target="_blank" class="dl-btn" style="background:var(--card-beige);color:#a07840;border-color:#e0c88a">
+          <i class="fa-brands fa-whatsapp"></i> Solicitar por WhatsApp
+        </a>
+      </div>
+      <div class="card card-border" style="text-align:center;background:var(--white)">
+        <div style="width:64px;height:64px;border-radius:16px;background:var(--card-lila);display:flex;align-items:center;justify-content:center;font-size:26px;color:#7a4eb0;margin:0 auto 16px">
+          <i class="fa-solid fa-file-pdf"></i>
+        </div>
+        <h3 style="font-size:15px;margin-bottom:8px">Checklist de asamblea ordinaria</h3>
+        <p style="font-size:12.5px;color:var(--text-body);margin-bottom:18px">Lista de verificación completa para preparar, convocar y ejecutar correctamente una asamblea ordinaria.</p>
+        <a href="https://wa.me/573053498787?text=Hola%2C+quiero+el+checklist+de+asamblea+ordinaria" target="_blank" class="dl-btn" style="background:var(--card-lila);color:#7a4eb0;border-color:#c8a8e8">
+          <i class="fa-brands fa-whatsapp"></i> Solicitar por WhatsApp
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- NEWSLETTER -->
 <section class="cta-strip">
-  <h2>¿Quieres recibir contenido útil cada semana?</h2>
-  <p>Suscríbete a nuestro boletín y recibe artículos, guías y novedades sobre Propiedad Horizontal directamente en tu correo.</p>
-  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px">
-    <input type="email" placeholder="tu@correo.com" style="padding:13px 22px;border-radius:50px;border:none;font-size:13.5px;width:280px;font-family:'Nunito Sans',sans-serif;outline:none"/>
-    <button class="btn-cta" style="border:none;cursor:pointer"><i class="fa-solid fa-paper-plane"></i> Suscribirme</button>
+  <div style="max-width:520px;margin:0 auto;text-align:center">
+    <i class="fa-solid fa-envelope-open-text" style="font-size:36px;color:var(--gold);margin-bottom:16px;display:block"></i>
+    <h2>¿Quieres recibir contenido útil cada semana?</h2>
+    <p style="margin:12px 0 24px">Suscríbete y recibe artículos, guías y novedades sobre Propiedad Horizontal directamente en tu correo.</p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <input type="email" id="nl-email" placeholder="tu@correo.com" style="padding:13px 22px;border-radius:50px;border:none;font-size:13.5px;width:260px;font-family:'Nunito Sans',sans-serif;outline:none;box-shadow:0 2px 10px rgba(0,0,0,0.1)"/>
+      <button class="btn-cta" style="border:none;cursor:pointer" onclick="subscribeNL()">
+        <i class="fa-solid fa-paper-plane"></i> Suscribirme
+      </button>
+    </div>
+    <p id="nl-msg" style="display:none;margin-top:14px;font-size:13px;color:var(--gold);font-weight:700">
+      <i class="fa-solid fa-circle-check"></i> ¡Listo! Te enviaremos novedades pronto.
+    </p>
   </div>
 </section>
 
 <style>
-.filter-btn{padding:8px 18px;border-radius:50px;border:1.5px solid #dde6e6;background:var(--white);font-size:12.5px;font-weight:700;color:var(--text-body);cursor:pointer;transition:all .2s;font-family:'Nunito Sans',sans-serif}
+/* FILTROS */
+.filter-btn{padding:9px 20px;border-radius:50px;border:1.5px solid #dde6e6;background:var(--white);font-size:12.5px;font-weight:700;color:var(--text-body);cursor:pointer;transition:all .2s;font-family:'Nunito Sans',sans-serif}
 .filter-btn:hover,.filter-btn.active{background:var(--teal);color:var(--white);border-color:var(--teal)}
+/* FEATURED */
+.featured-article{display:grid;grid-template-columns:380px 1fr;border-radius:22px;overflow:hidden;box-shadow:var(--shadow-soft);margin-bottom:52px}
+.featured-img{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-dark) 100%);display:flex;align-items:flex-end;justify-content:flex-start;padding:32px;position:relative;min-height:280px}
+.featured-img-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,169,107,0.18),transparent)}
+.featured-icon{position:absolute;right:-10px;bottom:-10px;font-size:120px;color:rgba(255,255,255,0.07)}
+.featured-badge-wrap{position:relative;z-index:1}
+.featured-badge{background:var(--gold);color:var(--white);font-size:11px;font-weight:700;padding:6px 16px;border-radius:50px;letter-spacing:.5px}
+.featured-body{padding:36px 36px 36px 32px;background:var(--white)}
+.featured-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;line-height:1.35;margin:12px 0 14px}
+.featured-desc{font-size:13.5px;color:var(--text-body);line-height:1.8;margin-bottom:20px}
+.btn-read{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;background:var(--teal);color:var(--white);border-radius:50px;font-size:13px;font-weight:700;transition:background .2s,transform .15s}
+.btn-read:hover{background:var(--teal-dark);transform:translateY(-1px)}
+/* BLOG GRID */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.blog-card{background:var(--white);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--shadow-card);transition:transform .22s,box-shadow .22s;display:flex;flex-direction:column}
+.blog-card:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(11,93,91,0.13)}
+.blog-card-img{height:175px;display:flex;align-items:center;justify-content:center;font-size:52px;color:rgba(255,255,255,0.55)}
+.blog-card-body{padding:22px 20px 20px;display:flex;flex-direction:column;flex:1}
+.blog-card h3{font-size:14.5px;font-weight:800;line-height:1.4;margin:10px 0 10px;color:var(--text-dark)}
+.blog-card p{font-size:12.5px;color:var(--text-body);line-height:1.7;flex:1;margin-bottom:14px}
+.blog-tag{font-size:10.5px;font-weight:700;color:var(--teal);background:var(--card-green);padding:4px 12px;border-radius:50px;display:inline-block;text-transform:uppercase;letter-spacing:.6px}
+.blog-meta{font-size:11px;color:#aaa;display:flex;gap:12px;flex-wrap:wrap}
+.blog-meta i{color:var(--gold)}
+.blog-link{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--teal);margin-top:14px;transition:gap .2s}
+.blog-link:hover{gap:10px}
+/* PAGINATION */
+.pagination{display:flex;justify-content:center;gap:8px;margin-top:52px}
+.page-btn{width:40px;height:40px;border-radius:50%;border:1.5px solid #dde6e6;background:var(--white);color:var(--text-dark);font-weight:700;font-size:13px;cursor:pointer;font-family:'Nunito Sans',sans-serif;transition:all .2s}
+.page-btn.active,.page-btn:hover{background:var(--teal);color:var(--white);border-color:var(--teal)}
+.page-btn.next{width:40px}
+/* DOWNLOAD BUTTON */
+.dl-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--card-green);color:var(--teal);border-radius:50px;font-size:12.5px;font-weight:700;border:1.5px solid #b0d8c8;transition:all .2s}
+.dl-btn:hover{background:var(--teal);color:var(--white);border-color:var(--teal)}
+/* RESPONSIVE */
+@media(max-width:900px){.featured-article{grid-template-columns:1fr}.featured-img{min-height:160px}}
+@media(max-width:768px){.blog-grid{grid-template-columns:1fr}}
 </style>
+
 <script>
+// Filter
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', function(){
     document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
     this.classList.add('active');
     const cat = this.dataset.cat;
     document.querySelectorAll('.blog-card').forEach(card=>{
-      card.style.display = (cat==='all'||card.dataset.cat===cat) ? 'block':'none';
+      card.style.display=(cat==='all'||card.dataset.cat===cat)?'flex':'none';
     });
+  });
+});
+// Newsletter
+function subscribeNL(){
+  const email=document.getElementById('nl-email').value.trim();
+  if(!email||!email.includes('@')){alert('Por favor ingresa un correo válido.');return;}
+  document.getElementById('nl-email').style.display='none';
+  document.querySelector('.btn-cta').style.display='none';
+  document.getElementById('nl-msg').style.display='block';
+}
+// Pagination visual
+document.querySelectorAll('.page-btn').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.page-btn').forEach(b=>b.classList.remove('active'));
+    if(!this.classList.contains('next')) this.classList.add('active');
   });
 });
 </script>
@@ -433,5 +603,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
+
+<a href="https://wa.me/573053498787?text=Hola+BORCA%2C+quiero+m%C3%A1s+informaci%C3%B3n." target="_blank" class="wa-float" title="Escríbenos por WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+<style>
+.wa-float{position:fixed;bottom:28px;right:28px;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;box-shadow:0 4px 24px rgba(37,211,102,0.45);z-index:999;transition:transform .2s;animation:wa-pulse 2.5s infinite;text-decoration:none}
+.wa-float:hover{transform:scale(1.1)}
+@keyframes wa-pulse{0%,100%{box-shadow:0 4px 24px rgba(37,211,102,0.45)}50%{box-shadow:0 4px 40px rgba(37,211,102,0.65),0 0 0 8px rgba(37,211,102,0.12)}}
+</style>
 </body>
 </html>
